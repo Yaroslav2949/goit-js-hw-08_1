@@ -1,13 +1,11 @@
-
 import SimpleLightbox from 'simplelightbox';
-import "simplelightbox/dist/simple-lightbox.min.css";
-
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 // Add imports above this line
 import { galleryItems } from './gallery-items';
 // Change code below this line
 
-const galleryContainer = document.querySelector(".gallery");
+const galleryContainer = document.querySelector('.gallery');
 const itemsMarkup = galleryItems.map(
   ({ preview, original, description }) =>
     `<li class="gallery__item">
@@ -16,10 +14,10 @@ const itemsMarkup = galleryItems.map(
     </a>
  </li>`
 );
-galleryContainer.insertAdjacentHTML("beforeend", itemsMarkup.join(""));
+galleryContainer.insertAdjacentHTML('beforeend', itemsMarkup.join(''));
 
-const lightbox = new SimpleLightbox(".gallery a", {
-  captionsData: "alt",
-  captionPosition: "bottom",
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionPosition: 'bottom',
   captionDelay: 250,
 });
